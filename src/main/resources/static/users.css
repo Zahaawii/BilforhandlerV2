@@ -14,3 +14,19 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.adminButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    padding: 20px;
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+}

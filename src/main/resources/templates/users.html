@@ -5,13 +5,12 @@
     <title>Title</title>
     <link rel="stylesheet" th:href="@{/users.css}">
 </head>
-<body>
+<body th:if="${session.loggedUser}">
 
 
-<h1 class="test"> All users </h1>
+<h1 class="test"> Welcome, <span th:text="${session.loggedUser}"> </span> </h1>
 
 <div class="user">
-
     <table>
         <tr>
             <th> username </th>
@@ -26,9 +25,12 @@
             <td th:text="${i.isAdmin}">is admin</td>
         </tr>
     </table>
-
-
 </div>
+    <div class ="adminButtons" th:if="${session.employeeTitle}">
+    <button class="addUser"> Click here to create a new user</button>
+    <button class="removeUser"> Click here to remove user </button>
+    </div>
+
 
 </body>
 </html>

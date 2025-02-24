@@ -53,4 +53,14 @@ public class BilforhandlerRepository {
         }
         return null;
     }
+
+    public List<Employees> getEmployeeByTitel() {
+        List<Employees> employeesByTitle = new ArrayList<>();
+        for(Employees i : users) {
+            if(i.isAdmin()) {
+                employeesByTitle.add(i);
+            }
+        }
+        return employeesByTitle;
+    }
 }

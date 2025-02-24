@@ -28,4 +28,8 @@ public class BilforhandlerService {
        return bilforhandlerRepository.checkCredentials(em);
     }
 
+    public List<Employees> getEmployeeByTitel() {
+        return bilforhandlerRepository.getEmployeeByTitel();
+    }
+
 }
