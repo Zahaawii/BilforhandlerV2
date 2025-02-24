@@ -41,10 +41,7 @@ public class BilforhandlerController {
 
     @PostMapping("/login")
     public String acceptLogin(@ModelAttribute ("employee") Employees employees, Model model) {
-        if(bilforhandlerService.checkCredentials(employees)) {
-            return "redirect:/users";
-        }
-        return "redirect:/login";
+        return "redirect:/users";
     }
 
     @GetMapping("/test")
