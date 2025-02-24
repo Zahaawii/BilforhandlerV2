@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login page</title>
+  <link href="loginPage.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+
+<h1 class="topName"> Omars cars login page </h1>
+<div class="loginBox">
+  <form action="#" th:action="@{/login}" th:object="${checkEmployees}" method="post">
+    <h1>Login page</h1>
+    <div class="input-box">
+      <label for="checkUsername">  </label>
+      <input type="text" id="checkUsername"  name="checkUsername" th:field="*{username}" placeholder="Username" required>
+      <i class="bx bxs-user"></i>
+    </div>
+
+    <div class="input-box">
+      <label for="checkUserpassword"></label>
+      <input type="password" name="checkUserpassword" id="checkUserpassword" th:field="*{password}" placeholder="Password" required>
+      <i class="bx bxs-lock-alt"></i>
+    </div>
+    <div class="remember-forgot">
+      <label>
+        <input type="checkbox" Remember me> Remember me </label>
+
+      <a href="#"> Forgot password?</a>
+    </div>
+    <button type="submit" class="btn">Login</button>
+
+    <div class="register-link">
+      <p> Don't have an account? <a href="#">Register</a>
+      </p>
+    </div>
+    <div class="icons">
+      <a href="#" class="fa fa-apple"></a>
+      <a href="https://github.com/Zahaawii" target="_blank" class="fa fa-github"></a>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-reddit"></a>
+      <a href="#" class="fa fa-facebook"></a>
+    </div>
+  </form>
+</div>
+
+</body>

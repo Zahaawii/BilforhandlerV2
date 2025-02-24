@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/users.css}">
+</head>
+<body>
+
+
+<h1 class="test"> All users </h1>
+
+<div class="user">
+
+    <table>
+        <tr>
+            <th> username </th>
+            <th> password </th>
+            <th> employee type</th>
+            <th> is admin?</th>
+        </tr>
+        <tr th:each="i : ${employees}">
+            <td th:text="${i.username}">username</td>
+            <td th:text="${i.password}">password</td>
+            <td th:text="${i.employeeType}">employee type</td>
+            <td th:text="${i.isAdmin}">is admin</td>
+        </tr>
+    </table>
+
+
+</div>
+
+</body>
+</html>
