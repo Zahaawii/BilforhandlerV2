@@ -1,3 +1,10 @@
+body {
+
+    background-color: #222222;
+    color: #b3d4fc;
+
+}
+
 .logo {
     display: flex;
     justify-content: center;
@@ -9,4 +16,58 @@
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
+}
+
+.midtsection {
+    position: relative;
+    display: inline-block;
+}
+
+.test {
+    width:100%;
+    height: auto;
+    display: block;
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.midtsection button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.aboutUS {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.aboutText {
+    border: 1px solid green;
+    border-radius: 20px;
+    padding: 50px;
+    text-align: center;
+    margin-right: 100px;
+    width: 25%;
+}
+
+.aboutPhoto {
+    border-radius: 20px;
+}
+
+.omar {
+    margin-left: 10px;
 }

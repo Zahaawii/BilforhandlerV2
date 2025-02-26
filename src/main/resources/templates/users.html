@@ -8,7 +8,7 @@
 <body th:if="${session.loggedUser}">
 
 
-<h1 class="test"> Welcome, <span th:text="${session.loggedUser}"> </span> </h1>
+<h1 class="test"> Welcome,"" <span th:text="${session.loggedUser}"> </span> </h1>
 
 <div class="user">
     <table>
@@ -27,8 +27,8 @@
     </table>
 </div>
     <div class ="adminButtons" th:if="${session.employeeTitle}">
-    <button class="addUser"> Click here to create a new user</button>
-    <button class="removeUser"> Click here to remove user </button>
+    <button class="addUser"> Click here to add a new car</button>
+    <button class="removeUser"> Click here to remove a car </button>
     </div>
 
 

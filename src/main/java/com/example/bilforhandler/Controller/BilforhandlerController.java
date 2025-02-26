@@ -65,7 +65,7 @@ public class BilforhandlerController {
         return new ResponseEntity<>(test, HttpStatus.OK);
     }
 
-    @GetMapping("/home")
+    @GetMapping("")
     public String homePage (Model model) {
         return "homepage";
     }
