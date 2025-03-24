@@ -16,20 +16,16 @@ public class BilforhandlerService {
         this.bilforhandlerRepository = bilforhandlerRepository;
     }
 
-    public List<Employees> getAllEmployees() {
-        return bilforhandlerRepository.getUsers();
-    }
-
     public List<Cars> getAllCars() {
-        return bilforhandlerRepository.getCars();
+        return bilforhandlerRepository.findAll();
     }
 
-    public Employees checkCredentials(Employees em) {
-       return bilforhandlerRepository.checkCredentials(em);
+    public Cars addCar(Cars cars) {
+        return bilforhandlerRepository.save(cars);
     }
 
-    public List<Employees> getEmployeeByTitel() {
-        return bilforhandlerRepository.getEmployeeByTitel();
+    public Cars findCarByID(Cars cars, Long carsID) {
+        return bilforhandlerRepository.findById(cars.getId()).get();
     }
 
 }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add cars to dealership</title>
+    <link rel="stylesheet" th:href="@{/seeCarsById.css}">
+</head>
+<body>
+
+<div class="section">
+
+    <div class ="carsContainer">
+    <h1 th:text="${cars.brand}" class="carBrand" ></h1>
+    <h1 th:text="${cars.model}" class="carModel"></h1>
+    <img th:src="@{${cars.imgpath}}" class="imgbox" alt="billede af bil">
+    <p th:text ="${cars.description}" class="description"></p>
+    </div>
+
+</div>
+</body>
+</html>

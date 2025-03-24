@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>See all cars</title>
+  <link rel="stylesheet" th:href="@{/cars.css}">
+</head>
+
+<body>
+
+<div class="section" th:each="i : ${seeAllCars}">
+  <h1 th:text="${i.brand}">Car brand</h1>
+  <p th:text="${i.model}">Car model</p>
+  <p th:text="${i.isUsed}">Is used?</p>
+  <p th:text="${i.miles}">Car miles</p>
+  <img th:src="@{${i.imgpath}}" alt="Car">
+  <div class="button">
+  <button>
+    Se mere
+  </button>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Add car to dealership</title>
+    <title>Add cars to dealership</title>
+    <link rel="stylesheet" th:href="@{/addcars.css}">
 </head>
 <body>
-<h1></h1>
 
+<div class ="center">
+
+    <div class="addFormular">
+        <h1 class="heading"> Add car to dealership</h1>
+        <form action="#" th:action="@{/addcar}" th:object="${newCars}" method="post">
+
+            <label for="carBrand"> Car brand</label>
+            <input type="text" id="carBrand" th:field="*{brand}" required><br>
+
+            <label for="carModel"> Car model</label>
+            <input type="text" id="carModel" th:field="*{model}" required><br>
+
+            <span> New or Used?</span>
+            <label for="true"> True</label>
+            <input type="radio" id="true" name="true" value="true" th:field="*{used}">
+            <label for="false"> False</label>
+            <input type="radio" id="false" name="false" value="false" th:field="*{used}"><br>
+
+
+            <label for="miles"> Miles</label>
+            <input type="number" id="miles" th:field="*{miles}"><br>
+
+            <label for="carPicture">Picture of the car</label>
+            <input type="text" id="carPicture" th:field="*{imgpath}"><br>
+
+            <label for="carDescription"> Car description</label>
+            <textarea id="carDescription" th:field="*{description}" rows="5" cols="20"></textarea>
+
+            <button type="submit">Add car to dealership</button>
+
+        </form>
+
+
+    </div>
+
+</div>
 </body>
 </html>

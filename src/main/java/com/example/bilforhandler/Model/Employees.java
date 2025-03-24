@@ -1,53 +1,31 @@
 package com.example.bilforhandler.Model;
 
+
+import jakarta.persistence.*;
+import jdk.jfr.BooleanFlag;
+import lombok.Data;
+
+@Data
+
+@Entity
+@Table(name="employees")
 public class Employees {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column(name = "username")
     private String username;
+
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "employee_type")
+    @Enumerated(EnumType.STRING)
     private EmployeeType employeeType;
+
+    @Column(name = "is_Admin")
     private boolean isAdmin;
-
-    public Employees(String username, String password, boolean isAdmin, EmployeeType employeeType) {
-        this.username = username;
-        this.password = password;
-        this.isAdmin = isAdmin;
-        this.employeeType = employeeType;
-    }
-
-    public Employees() {
-
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public boolean isAdmin() {
-        return isAdmin;
-    }
-
-    public void setIsAdmin(boolean isAdmin) {
-        this.isAdmin = isAdmin;
-    }
-
-    public EmployeeType getEmployeeType() {
-        return employeeType;
-    }
-
-    public void setEmployeeType(EmployeeType employeeType) {
-        this.employeeType = employeeType;
-    }
 
 }

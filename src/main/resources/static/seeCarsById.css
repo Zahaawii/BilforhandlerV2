@@ -1,0 +1,25 @@
+* {
+    background-color: #121212;
+    color: cornflowerblue;
+}
+
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    border: 1px solid cornflowerblue;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.imgbox {
+    object-fit: contain;
+    max-height: 300px;
+    width: 100%;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee</title>
+    <link rel="stylesheet" th:href="@{/addusers.css}">
+</head>
+<body>
+
+
+<div class ="center">
+
+
+<div class="addFormular">
+    <h1 class="heading"> Tilføj en ny medarbejder </h1>
+    <form action="#" th:action="@{/addusers}" th:object="${addEmployee}" method="post">
+        <label for="employeeName"> Username </label>
+        <input type="text" id="employeeName" th:field="*{username}" required><br>
+
+        <label for="employeeLastName"> Password</label>
+        <input type="password" id="employeeLastName" th:field="*{password}" required><br>
+
+        <div class="employee">
+        <div th:each="employeeType : ${employeetype}">
+            <input type="checkbox" name="employeeType" th:value="${employeeType.name()}" th:id="${employeeType.name()}">
+            <label th:for="${employeeType.name()}" th:text="${employeeType.displayTitle}"></label>
+        </div>
+        </div>
+
+
+        <button type="submit"> Opret konto </button>
+    </form>
+
+</div>
+</div>
+
+</body>
+</html>

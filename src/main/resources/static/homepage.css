@@ -18,6 +18,12 @@ body {
     list-style: none;
 }
 
+li a:visited {
+    color: #b3d4fc;
+    text-decoration: none;
+
+}
+
 .midtsection {
     position: relative;
     display: inline-block;
